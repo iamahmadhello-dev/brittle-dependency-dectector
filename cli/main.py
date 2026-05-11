@@ -226,11 +226,6 @@ def main():
         logger.error(f"An error occurred: {e}", exc_info=True)
         print(f"\n❌ Error: {e}")
         return
-# Test commit for GitHub Actions workflow
-# GitHub Actions test change
-
-# Final GitHub Actions test
-# Testing CI workflow automation
 
 if __name__ == "__main__":
     main()
