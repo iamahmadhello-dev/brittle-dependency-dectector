@@ -67,11 +67,11 @@ jobs:
           --metrics-file ./brent_metrics_history.json \
           --action append
     
-    - name: Commit Metrics
-      if: github.event_name == 'push'
-      run: |
-        git config user.name "Brent Detector Bot"
-        git config user.email "brent-detector@example.com"
-        git add brent_metrics_history.json || true
-        git commit -m "Update brittle dependency metrics [skip ci]" || true
-        git push || true
+   # - name: Commit Metrics
+      #if: github.event_name == 'push'
+      #run: |
+       # git config user.name "Brent Detector Bot"
+       # git config user.email "brent-detector@example.com"
+      #git add brent_metrics_history.json || true
+       # git commit -m "Update brittle dependency metrics [skip ci]" || true
+       # git push || true
