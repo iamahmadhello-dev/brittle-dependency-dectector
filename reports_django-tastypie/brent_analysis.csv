@@ -1,0 +1,11 @@
+Rank,Module,Score,Incoming Dependencies,Outgoing Dependencies,Degree Centrality,Betweenness Centrality,Closeness Centrality,PageRank,Eigenvector Centrality,In Cycle,SCC Size
+1,tastypie.resources,0.8406,30,37,0.347150,0.015007,0.175046,0.012860,0.157425,Yes,20
+2,tastypie.contrib.contenttypes.fields,0.8333,22,51,0.378238,0.036942,0.152393,0.007381,0.107382,Yes,20
+3,tastypie.api,0.8283,32,10,0.217617,0.004305,0.179908,0.018198,0.102992,Yes,20
+4,tastypie.contrib.contenttypes.resources,0.7426,23,3,0.134715,0.000346,0.154207,0.006195,0.106694,Yes,20
+5,tastypie.contrib.gis.resources,0.7337,22,37,0.305699,0.000152,0.147197,0.004971,0.102992,Yes,20
+6,tests.content_gfk.api.resources,0.6250,8,4,0.062176,0.003071,0.107945,0.006988,0.023642,Yes,20
+7,tests.basic.api.resources,0.6184,7,38,0.233161,0.003726,0.107945,0.005368,0.023642,Yes,20
+8,tests.related_resource.api.resources,0.6152,7,39,0.238342,0.002548,0.105312,0.004712,0.019939,Yes,20
+9,tests.namespaced.api.resources,0.6102,6,38,0.227979,0.003780,0.106175,0.005139,0.019939,Yes,20
+10,tests.gis.api.resources,0.6064,6,38,0.227979,0.002368,0.104463,0.004633,0.019939,Yes,20

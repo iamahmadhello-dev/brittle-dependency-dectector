@@ -1,0 +1,2 @@
+Rank,Module,Score,Incoming Dependencies,Outgoing Dependencies,Degree Centrality,Betweenness Centrality,Closeness Centrality,PageRank,Eigenvector Centrality,In Cycle,SCC Size
+1,flask_website.database,0.9650,9,17,1.368421,0.083333,0.421053,0.093988,0.300965,Yes,7

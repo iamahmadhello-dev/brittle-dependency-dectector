@@ -1,0 +1,60 @@
+====================================================================================================
+BRENT DETECTOR - DETAILED ANALYSIS REPORT
+====================================================================================================
+
+Generated: 2026-04-28 12:08:03
+
+METRIC DEFINITIONS:
+----------------------------------------------------------------------------------------------------
+• Fragility Score: Composite risk score (0-1) - Higher = More Fragile
+• Incoming Dependencies: Number of modules that depend on this module
+• Outgoing Dependencies: Number of modules this module depends on
+• Degree Centrality: Direct importance in network (0-1)
+• Betweenness Centrality: Bridge importance - how often module is on path between others (0-1)
+• Closeness Centrality: Proximity to other modules (0-1)
+• PageRank: Network influence score (0-1)
+• Eigenvector Centrality: Connection importance - connected to important nodes (0-1)
+• In Cycle: Whether module is part of circular dependency
+• SCC Size: Size of tightly-coupled region (1=isolated)
+
+====================================================================================================
+TOP BRITTLE MODULES (RANKED)
+====================================================================================================
+
+#1. app.models
+----------------------------------------------------------------------------------------------------
+  Fragility Score              : 0.4500
+  Incoming Dependencies       : 17
+  Outgoing Dependencies       : 1
+  Degree Centrality           : 0.473684
+  Betweenness Centrality      : 0.007468
+  Closeness Centrality        : 0.452381
+  PageRank                    : 0.141780
+  Eigenvector Centrality      : 0.009226
+  In Cycle                    : NO ✓ (Not in cycle)
+  SCC Size                    : 1 (Coupling region size)
+
+#2. app.api.errors
+----------------------------------------------------------------------------------------------------
+  Fragility Score              : 0.2598
+  Incoming Dependencies       : 11
+  Outgoing Dependencies       : 1
+  Degree Centrality           : 0.315789
+  Betweenness Centrality      : 0.002489
+  Closeness Centrality        : 0.286550
+  PageRank                    : 0.042204
+  Eigenvector Centrality      : 0.003075
+  In Cycle                    : NO ✓ (Not in cycle)
+  SCC Size                    : 1 (Coupling region size)
+
+====================================================================================================
+SUMMARY STATISTICS
+====================================================================================================
+Total Modules Analyzed      : 39
+Top Brents Listed           : 2
+Modules in Cycles           : 0
+Average SCC Size            : 1.00
+Max Incoming Dependencies   : 17
+Average Incoming Deps       : 4.18
+
+====================================================================================================

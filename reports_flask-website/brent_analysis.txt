@@ -1,0 +1,47 @@
+====================================================================================================
+BRENT DETECTOR - DETAILED ANALYSIS REPORT
+====================================================================================================
+
+Generated: 2026-05-01 20:57:55
+
+METRIC DEFINITIONS:
+----------------------------------------------------------------------------------------------------
+• Fragility Score: Composite risk score (0-1) - Higher = More Fragile
+• Incoming Dependencies: Number of modules that depend on this module
+• Outgoing Dependencies: Number of modules this module depends on
+• Degree Centrality: Direct importance in network (0-1)
+• Betweenness Centrality: Bridge importance - how often module is on path between others (0-1)
+• Closeness Centrality: Proximity to other modules (0-1)
+• PageRank: Network influence score (0-1)
+• Eigenvector Centrality: Connection importance - connected to important nodes (0-1)
+• In Cycle: Whether module is part of circular dependency
+• SCC Size: Size of tightly-coupled region (1=isolated)
+
+====================================================================================================
+TOP BRITTLE MODULES (RANKED)
+====================================================================================================
+
+#1. flask_website.database
+----------------------------------------------------------------------------------------------------
+  Fragility Score              : 0.9650
+  Incoming Dependencies       : 9
+  Outgoing Dependencies       : 17
+  Degree Centrality           : 1.368421
+  Betweenness Centrality      : 0.083333
+  Closeness Centrality        : 0.421053
+  PageRank                    : 0.093988
+  Eigenvector Centrality      : 0.300965
+  In Cycle                    : YES ⚠️ (Part of circular dependency)
+  SCC Size                    : 7 (Coupling region size)
+
+====================================================================================================
+SUMMARY STATISTICS
+====================================================================================================
+Total Modules Analyzed      : 20
+Top Brents Listed           : 1
+Modules in Cycles           : 7
+Average SCC Size            : 3.10
+Max Incoming Dependencies   : 10
+Average Incoming Deps       : 6.35
+
+====================================================================================================

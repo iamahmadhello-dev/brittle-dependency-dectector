@@ -1,0 +1,164 @@
+====================================================================================================
+BRENT DETECTOR - DETAILED ANALYSIS REPORT
+====================================================================================================
+
+Generated: 2026-05-01 21:59:09
+
+METRIC DEFINITIONS:
+----------------------------------------------------------------------------------------------------
+• Fragility Score: Composite risk score (0-1) - Higher = More Fragile
+• Incoming Dependencies: Number of modules that depend on this module
+• Outgoing Dependencies: Number of modules this module depends on
+• Degree Centrality: Direct importance in network (0-1)
+• Betweenness Centrality: Bridge importance - how often module is on path between others (0-1)
+• Closeness Centrality: Proximity to other modules (0-1)
+• PageRank: Network influence score (0-1)
+• Eigenvector Centrality: Connection importance - connected to important nodes (0-1)
+• In Cycle: Whether module is part of circular dependency
+• SCC Size: Size of tightly-coupled region (1=isolated)
+
+====================================================================================================
+TOP BRITTLE MODULES (RANKED)
+====================================================================================================
+
+#1. tastypie.resources
+----------------------------------------------------------------------------------------------------
+  Fragility Score              : 0.8406
+  Incoming Dependencies       : 30
+  Outgoing Dependencies       : 37
+  Degree Centrality           : 0.347150
+  Betweenness Centrality      : 0.015007
+  Closeness Centrality        : 0.175046
+  PageRank                    : 0.012860
+  Eigenvector Centrality      : 0.157425
+  In Cycle                    : YES ⚠️ (Part of circular dependency)
+  SCC Size                    : 20 (Coupling region size)
+
+#2. tastypie.contrib.contenttypes.fields
+----------------------------------------------------------------------------------------------------
+  Fragility Score              : 0.8333
+  Incoming Dependencies       : 22
+  Outgoing Dependencies       : 51
+  Degree Centrality           : 0.378238
+  Betweenness Centrality      : 0.036942
+  Closeness Centrality        : 0.152393
+  PageRank                    : 0.007381
+  Eigenvector Centrality      : 0.107382
+  In Cycle                    : YES ⚠️ (Part of circular dependency)
+  SCC Size                    : 20 (Coupling region size)
+
+#3. tastypie.api
+----------------------------------------------------------------------------------------------------
+  Fragility Score              : 0.8283
+  Incoming Dependencies       : 32
+  Outgoing Dependencies       : 10
+  Degree Centrality           : 0.217617
+  Betweenness Centrality      : 0.004305
+  Closeness Centrality        : 0.179908
+  PageRank                    : 0.018198
+  Eigenvector Centrality      : 0.102992
+  In Cycle                    : YES ⚠️ (Part of circular dependency)
+  SCC Size                    : 20 (Coupling region size)
+
+#4. tastypie.contrib.contenttypes.resources
+----------------------------------------------------------------------------------------------------
+  Fragility Score              : 0.7426
+  Incoming Dependencies       : 23
+  Outgoing Dependencies       : 3
+  Degree Centrality           : 0.134715
+  Betweenness Centrality      : 0.000346
+  Closeness Centrality        : 0.154207
+  PageRank                    : 0.006195
+  Eigenvector Centrality      : 0.106694
+  In Cycle                    : YES ⚠️ (Part of circular dependency)
+  SCC Size                    : 20 (Coupling region size)
+
+#5. tastypie.contrib.gis.resources
+----------------------------------------------------------------------------------------------------
+  Fragility Score              : 0.7337
+  Incoming Dependencies       : 22
+  Outgoing Dependencies       : 37
+  Degree Centrality           : 0.305699
+  Betweenness Centrality      : 0.000152
+  Closeness Centrality        : 0.147197
+  PageRank                    : 0.004971
+  Eigenvector Centrality      : 0.102992
+  In Cycle                    : YES ⚠️ (Part of circular dependency)
+  SCC Size                    : 20 (Coupling region size)
+
+#6. tests.content_gfk.api.resources
+----------------------------------------------------------------------------------------------------
+  Fragility Score              : 0.6250
+  Incoming Dependencies       : 8
+  Outgoing Dependencies       : 4
+  Degree Centrality           : 0.062176
+  Betweenness Centrality      : 0.003071
+  Closeness Centrality        : 0.107945
+  PageRank                    : 0.006988
+  Eigenvector Centrality      : 0.023642
+  In Cycle                    : YES ⚠️ (Part of circular dependency)
+  SCC Size                    : 20 (Coupling region size)
+
+#7. tests.basic.api.resources
+----------------------------------------------------------------------------------------------------
+  Fragility Score              : 0.6184
+  Incoming Dependencies       : 7
+  Outgoing Dependencies       : 38
+  Degree Centrality           : 0.233161
+  Betweenness Centrality      : 0.003726
+  Closeness Centrality        : 0.107945
+  PageRank                    : 0.005368
+  Eigenvector Centrality      : 0.023642
+  In Cycle                    : YES ⚠️ (Part of circular dependency)
+  SCC Size                    : 20 (Coupling region size)
+
+#8. tests.related_resource.api.resources
+----------------------------------------------------------------------------------------------------
+  Fragility Score              : 0.6152
+  Incoming Dependencies       : 7
+  Outgoing Dependencies       : 39
+  Degree Centrality           : 0.238342
+  Betweenness Centrality      : 0.002548
+  Closeness Centrality        : 0.105312
+  PageRank                    : 0.004712
+  Eigenvector Centrality      : 0.019939
+  In Cycle                    : YES ⚠️ (Part of circular dependency)
+  SCC Size                    : 20 (Coupling region size)
+
+#9. tests.namespaced.api.resources
+----------------------------------------------------------------------------------------------------
+  Fragility Score              : 0.6102
+  Incoming Dependencies       : 6
+  Outgoing Dependencies       : 38
+  Degree Centrality           : 0.227979
+  Betweenness Centrality      : 0.003780
+  Closeness Centrality        : 0.106175
+  PageRank                    : 0.005139
+  Eigenvector Centrality      : 0.019939
+  In Cycle                    : YES ⚠️ (Part of circular dependency)
+  SCC Size                    : 20 (Coupling region size)
+
+#10. tests.gis.api.resources
+----------------------------------------------------------------------------------------------------
+  Fragility Score              : 0.6064
+  Incoming Dependencies       : 6
+  Outgoing Dependencies       : 38
+  Degree Centrality           : 0.227979
+  Betweenness Centrality      : 0.002368
+  Closeness Centrality        : 0.104463
+  PageRank                    : 0.004633
+  Eigenvector Centrality      : 0.019939
+  In Cycle                    : YES ⚠️ (Part of circular dependency)
+  SCC Size                    : 20 (Coupling region size)
+
+====================================================================================================
+SUMMARY STATISTICS
+====================================================================================================
+Total Modules Analyzed      : 194
+Top Brents Listed           : 10
+Modules in Cycles           : 20
+Average SCC Size            : 2.96
+Max Incoming Dependencies   : 42
+Average Incoming Deps       : 5.90
+
+====================================================================================================

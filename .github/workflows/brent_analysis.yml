@@ -1,0 +1,77 @@
+name: Brittle Dependency Analysis
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main, develop ]
+
+jobs:
+  analyze:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+      with:
+        fetch-depth: 0  # Full history for git analysis
+    
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.9'
+    
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install networkx graphviz
+        pip install -e .
+    
+    - name: Install Graphviz
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y graphviz
+    
+    - name: Run Brent Detector
+      run: |
+        python -m cli.main --project . --output-dir ./brent_reports
+        cat brent_reports/brent_summary.txt
+    
+    - name: Post PR Comment
+      if: github.event_name == 'pull_request'
+      uses: actions/github-script@v6
+      with:
+        script: |
+          const fs = require('fs');
+          const summary = fs.readFileSync('./brent_reports/brent_summary.txt', 'utf8');
+          
+          github.rest.issues.createComment({
+            issue_number: context.issue.number,
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            body: `## 🔍 Brittle Dependency Analysis\n\n\`\`\`\n${summary}\n\`\`\``
+          });
+    
+    - name: Upload Reports
+      if: always()
+      uses: actions/upload-artifact@v3
+      with:
+        name: brent-reports
+        path: brent_reports/
+        retention-days: 30
+    
+    - name: Track Metrics
+      if: always()
+      run: |
+        python scripts/metrics_tracker.py \
+          --project . \
+          --metrics-file ./brent_metrics_history.json \
+          --action append
+    
+    - name: Commit Metrics
+      if: github.event_name == 'push'
+      run: |
+        git config user.name "Brent Detector Bot"
+        git config user.email "brent-detector@example.com"
+        git add brent_metrics_history.json || true
+        git commit -m "Update brittle dependency metrics [skip ci]" || true
+        git push || true

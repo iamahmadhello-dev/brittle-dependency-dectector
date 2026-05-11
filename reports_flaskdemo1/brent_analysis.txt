@@ -1,0 +1,99 @@
+====================================================================================================
+BRENT DETECTOR - DETAILED ANALYSIS REPORT
+====================================================================================================
+
+Generated: 2026-05-03 23:14:57
+
+METRIC DEFINITIONS:
+----------------------------------------------------------------------------------------------------
+• Fragility Score: Composite risk score (0-1) - Higher = More Fragile
+• Incoming Dependencies: Number of modules that depend on this module
+• Outgoing Dependencies: Number of modules this module depends on
+• Degree Centrality: Direct importance in network (0-1)
+• Betweenness Centrality: Bridge importance - how often module is on path between others (0-1)
+• Closeness Centrality: Proximity to other modules (0-1)
+• PageRank: Network influence score (0-1)
+• Eigenvector Centrality: Connection importance - connected to important nodes (0-1)
+• In Cycle: Whether module is part of circular dependency
+• SCC Size: Size of tightly-coupled region (1=isolated)
+
+====================================================================================================
+TOP BRITTLE MODULES (RANKED)
+====================================================================================================
+
+#1. src.flask.globals
+----------------------------------------------------------------------------------------------------
+  Fragility Score              : 0.7626
+  Incoming Dependencies       : 18
+  Outgoing Dependencies       : 7
+  Degree Centrality           : 0.304878
+  Betweenness Centrality      : 0.030151
+  Closeness Centrality        : 0.275152
+  PageRank                    : 0.019074
+  Eigenvector Centrality      : 0.278461
+  In Cycle                    : YES ⚠️ (Part of circular dependency)
+  SCC Size                    : 17 (Coupling region size)
+
+#2. src.flask.sansio.app
+----------------------------------------------------------------------------------------------------
+  Fragility Score              : 0.7614
+  Incoming Dependencies       : 14
+  Outgoing Dependencies       : 11
+  Degree Centrality           : 0.304878
+  Betweenness Centrality      : 0.043435
+  Closeness Centrality        : 0.275152
+  PageRank                    : 0.017196
+  Eigenvector Centrality      : 0.305971
+  In Cycle                    : YES ⚠️ (Part of circular dependency)
+  SCC Size                    : 17 (Coupling region size)
+
+#3. src.flask.app
+----------------------------------------------------------------------------------------------------
+  Fragility Score              : 0.6496
+  Incoming Dependencies       : 8
+  Outgoing Dependencies       : 12
+  Degree Centrality           : 0.243902
+  Betweenness Centrality      : 0.015603
+  Closeness Centrality        : 0.225766
+  PageRank                    : 0.009942
+  Eigenvector Centrality      : 0.179274
+  In Cycle                    : YES ⚠️ (Part of circular dependency)
+  SCC Size                    : 17 (Coupling region size)
+
+#4. src.flask.testing
+----------------------------------------------------------------------------------------------------
+  Fragility Score              : 0.6396
+  Incoming Dependencies       : 8
+  Outgoing Dependencies       : 6
+  Degree Centrality           : 0.170732
+  Betweenness Centrality      : 0.011261
+  Closeness Centrality        : 0.200111
+  PageRank                    : 0.007643
+  Eigenvector Centrality      : 0.098437
+  In Cycle                    : YES ⚠️ (Part of circular dependency)
+  SCC Size                    : 17 (Coupling region size)
+
+#5. src.flask.helpers
+----------------------------------------------------------------------------------------------------
+  Fragility Score              : 0.6384
+  Incoming Dependencies       : 10
+  Outgoing Dependencies       : 4
+  Degree Centrality           : 0.170732
+  Betweenness Centrality      : 0.003867
+  Closeness Centrality        : 0.217404
+  PageRank                    : 0.011918
+  Eigenvector Centrality      : 0.275878
+  In Cycle                    : YES ⚠️ (Part of circular dependency)
+  SCC Size                    : 17 (Coupling region size)
+
+====================================================================================================
+SUMMARY STATISTICS
+====================================================================================================
+Total Modules Analyzed      : 83
+Top Brents Listed           : 5
+Modules in Cycles           : 15
+Average SCC Size            : 4.28
+Max Incoming Dependencies   : 44
+Average Incoming Deps       : 2.63
+
+====================================================================================================

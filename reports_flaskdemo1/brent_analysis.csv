@@ -1,0 +1,6 @@
+Rank,Module,Score,Incoming Dependencies,Outgoing Dependencies,Degree Centrality,Betweenness Centrality,Closeness Centrality,PageRank,Eigenvector Centrality,In Cycle,SCC Size
+1,src.flask.globals,0.7626,18,7,0.304878,0.030151,0.275152,0.019074,0.278461,Yes,17
+2,src.flask.sansio.app,0.7614,14,11,0.304878,0.043435,0.275152,0.017196,0.305971,Yes,17
+3,src.flask.app,0.6496,8,12,0.243902,0.015603,0.225766,0.009942,0.179274,Yes,17
+4,src.flask.testing,0.6396,8,6,0.170732,0.011261,0.200111,0.007643,0.098437,Yes,17
+5,src.flask.helpers,0.6384,10,4,0.170732,0.003867,0.217404,0.011918,0.275878,Yes,17
