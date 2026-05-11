@@ -227,6 +227,7 @@ def main():
         print(f"\n❌ Error: {e}")
         return
 # Test commit for GitHub Actions workflow
+# GitHub Actions test change
 
 if __name__ == "__main__":
     main()
