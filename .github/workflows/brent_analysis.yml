@@ -33,7 +33,7 @@ jobs:
     
     - name: Run Brent Detector
       run: |
-        python -m cli.main --project . --output-dir ./brent_reports
+        python -m cli.main . --output-dir ./brent_reports
         cat brent_reports/brent_summary.txt
     
     - name: Post PR Comment
