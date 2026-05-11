@@ -228,4 +228,5 @@ def main():
         return
 
 if __name__ == "__main__":
+    #running the function again
     main()
