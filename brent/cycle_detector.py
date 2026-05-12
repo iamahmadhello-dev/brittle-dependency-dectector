@@ -127,3 +127,4 @@ class CycleDetector:
             "cycle_complexity_distribution": self.get_complexity_distribution(),
             "longest_cycle_length": max([len(c) for c in self.cycles], default=0),
         }
+#test run

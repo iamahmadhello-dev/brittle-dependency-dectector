@@ -2,7 +2,7 @@
 BRENT DETECTOR - DETAILED ANALYSIS REPORT
 ====================================================================================================
 
-Generated: 2026-05-01 21:59:09
+Generated: 2026-05-11 16:45:16
 
 METRIC DEFINITIONS:
 ----------------------------------------------------------------------------------------------------
@@ -156,7 +156,7 @@ SUMMARY STATISTICS
 ====================================================================================================
 Total Modules Analyzed      : 194
 Top Brents Listed           : 10
-Modules in Cycles           : 20
+Modules in Cycles           : 17
 Average SCC Size            : 2.96
 Max Incoming Dependencies   : 42
 Average Incoming Deps       : 5.90
